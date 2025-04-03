@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller ODS - Sesión 4</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .header { background-color: #2196F3; color: white; text-align: center; padding: 10px; }
+        .activity { margin-bottom: 20px; }
+        .banner {
+            background-color: #2196F3;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+         .banner .title, .banner .subtitle {
+            margin: 0;
+        }
+         .banner hr {
+            border: none;
+            border-top: 1px solid #e0e0e0; /* Light line for separation */
+            margin: 8px 0;
+        }
+         .banner .subtitle {
+            font-size: 0.9em;
+            color: #e0e0e0; /* Lighter color for subtitle */
+            font-weight: normal;
+        }
+        .content { display: none; padding: 15px; border: 1px solid #ddd; margin-bottom: 10px; border-radius: 5px; background-color: #f9f9f9; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
+        }
+         th {
+            background-color: #e9e9e9; /* Lighter grey for headers */
+        }
+        span[style*="color: red;"] {
+            font-weight: bold;
+        }
+         li { margin-bottom: 5px; }
+         ul, ol { margin-top: 5px; padding-left: 20px; }
+         em { font-style: italic; color: #555; } /* Style for teacher notes */
+         .time-title { color: #2196F3; margin-bottom: 20px;} /* Blue color for time title */
+         strong { color: #2196F3; } /* Highlight key terms maybe */
+    </style>
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            content.style.display = content.style.display === "none" ? "block" : "none";
+        }
+        // Initialize on page load
+        window.onload = function() {
+          // Optionally expand the first activity or 'De un Vistazo' by default
+          // toggleContent('de_un_vistazo_content');
+        };
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Taller ODS - Sesión 4: ¡El Plan Maestro y Estreno Mundial!</h1>
+    </div>
+    <div class="container">
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de Taller: 40 minutos</h2>
+
+        <!-- De un Vistazo -->
+         <div id="de-un-vistazo" class="activity" data-time="N/A">
+            <div class="banner" onclick="toggleContent('de_un_vistazo_content')">
+                <div class="title">👁️ De un Vistazo: Sesión 4</div>
+                <hr>
+                <div class="subtitle">Resumen rápido de objetivos, tácticas, entregables, materiales y preparación.</div>
+            </div>
+            <div id="de_un_vistazo_content" class="content">
+                <table>
+                    <tr style="background-color: #f9f9f9;">
+                        <th style="width: 50%;">Objetivos, Tácticas y Entregable</th>
+                        <th style="width: 50%;">Materiales y Preparación Previa</th>
+                    </tr>
+                    <tr>
+                        <td>
+                           <strong>Objetivos:</strong>
+                            <ul>
+                                <li><strong>Táctica 7:</strong> Consolidar la historia interactiva (Escena Inicial, Héroe, Villano, Escenas Mejor/Peor) en un Prototipo Conceptual T-Bar.</li>
+                                <li>Conectar la interacción del T-Bar con bloques básicos de Scratch Jr. (Tap, Switch Background).</li>
+                                <li><strong>Táctica 8:</strong> Presentar los prototipos T-Bar a los compañeros ("Estreno Mundial").</li>
+                                <li>Practicar dar y recibir retroalimentación simple y positiva (Like, Wish, Wonder).</li>
+                                <li>Cerrar el taller motivando para la construcción real en Scratch Jr.</li>
+                            </ul>
+                           <strong>Tácticas Principales:</strong> ¡El Plan Secreto! (T-Bar Simplificado), ¡Misión Presentada! (Show & Tell + LWW).
+                           <br><strong>Entregable Clave:</strong> Prototipo Conceptual T-Bar por equipo. Notas de retroalimentación LWW recibidas.
+                        </td>
+                        <td>
+                           <strong>Materiales Específicos:</strong>
+                            <ul>
+                                <li>Proyector o pantalla interactiva.</li>
+                                <li>Presentación de diapositivas (Diapositivas 22-27 detalladas abajo).</li>
+                                <li>Acceso a tablero Miro (o similar) con plantillas T-Bar, o rotafolios/papeles grandes con formato T-Bar.</li>
+                                <li>Dibujos de la Sesión 3 (Escena Inicial, Escena Mejor, Escena Peor).</li>
+                                <li>Dibujos de la Sesión 2 (Héroe y Villano).</li>
+                                <li>Lápices, marcadores, colores.</li>
+                                <li>Notas adhesivas pequeñas (físicas o digitales) para LWW.</li>
+                                <li>Ejemplo "¡Xolo vs. el Basuravirus!" integrado en las diapositivas.</li>
+                            </ul>
+                            <strong>Preparación Previa para ESTA Sesión:</strong>
+                            <ol>
+                                <li><strong>Presentación Lista:</strong> Tener listas las Diapositivas 22 a 27. Preparar el ejemplo visual del T-Bar de Xolo.</li>
+                                <li><strong>Plantillas T-Bar:</strong> Listas para cada equipo (digitales o físicas).</li>
+                                <li><strong>Material Retro LWW:</strong> Notas adhesivas y Diapositiva 26 con instrucciones LWW.</li>
+                                <li><strong>Espacio de Trabajo:</strong> Equipos deben tener acceso a TODOS sus dibujos (Héroe, Villano, Escena Inicial, Mejor, Peor).</li>
+                            </ol>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 1: Recap e Integración -->
+        <div id="activity-1" class="activity" data-time="3">
+            <div class="banner" onclick="toggleContent('activity_1_content')">
+                <div class="title">🔄 Actividad 1: Recap e Integración ⏰ Tiempo: 3 minutos</div>
+                <hr>
+                <div class="subtitle">Bienvenida a la sesión final, recordatorio de los dibujos clave y presentación del objetivo: crear el Plan Maestro (T-Bar).</div>
+            </div>
+            <div id="activity_1_content" class="content">
+                <table>
+                    <tr style="background-color: #e9e9e9;">
+                         <th style="width: 50%;">Acción</th>
+                         <th style="width: 50%;">Diálogo Maestro</th>
+                     </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar <strong>Diapositiva 22</strong>.
+                            <ul>
+                                <li><em>Título:</em> "¡Sesión Final! ¡El Plan Maestro y Estreno!"</li>
+                                <li><em>Imagen:</em> Un T-Bar completo y colorido (puede ser el de Xolo o uno genérico), o Xolo en una alfombra roja de estreno.</li>
+                                <li><em>Texto:</em> "¡Hoy creamos nuestro plan final y presentamos nuestras aventuras!"</li>
+                            </ul>
+                            Asegurarse de que los equipos tengan TODOS sus dibujos de Sesiones 2 y 3 a mano.
+                        </td>
+                        <td>
+                            "¡Equipos de Héroes ODS, bienvenidos a la última sesión! ¡Hoy es el gran día del Estreno Mundial! 🚀🎬"
+                             <br><br>
+                            "¿Recuerdan todos los dibujos súper importantes que hicieron? Tenemos al <strong>Héroe</strong>, al <strong>Villano</strong>, la <strong>Escena Inicial</strong> (donde todo empieza), la <strong>Escena 'Mejor'</strong> (el final feliz) y la <strong>Escena 'Peor'</strong> (el final triste). ¡Asegúrense de tenerlos todos a mano!"
+                             <br><br>
+                            "¡Hoy vamos a juntar todo eso en nuestro <strong>Plan Maestro final</strong>, usando una herramienta secreta llamada T-Bar! Y después... ¡será el <strong>Estreno Mundial</strong> de sus increíbles historias interactivas! ¿Emocionados?"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 2: Táctica 7: ¡El Plan Secreto! (T-Bar Simplificado) -->
+        <div id="activity-2" class="activity" data-time="20">
+            <div class="banner" onclick="toggleContent('activity_2_content')">
+                <div class="title">🗺️ Actividad 2: Táctica 7: ¡El Plan Secreto! (T-Bar Simplificado) ⏰ Tiempo: 20 minutos</div>
+                <hr>
+                <div class="subtitle">Los equipos consolidan sus dibujos (Escena Inicial, Mejor, Peor) y definen la lógica de interacción (Clics y bloques Jr.) en la plantilla T-Bar.</div>
+            </div>
+            <div id="activity_2_content" class="content">
+                <table>
+                    <tr style="background-color: #e9e9e9;">
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar <strong>Diapositiva 23</strong>. Distribuir plantillas T-Bar (físicas o digitales).
+                            <ul>
+                                <li><em>Título:</em> "¡Paso 7! ¡El Plan Secreto! (T-Bar)"</li>
+                                <li><em>Icono:</em> Mapa 🗺️ + Llave 🔑.</li>
+                                <li><em>Instrucción (Visual y textual):</em>
+                                    <ul>
+                                        <li>"¡Combinen todo! Izquierda: Dibujen GRANDE la Escena Principal (con Héroe y Villano)."</li>
+                                        <li>"Derecha: Expliquen con dibujos/palabras:"</li>
+                                        <li>"1. Qué es." (Título de la historia)</li>
+                                        <li>"2. Clic Villano -> Escena Peor." (Dibujo pequeño de Escena Peor)</li>
+                                        <li>"3. Clic Héroe -> Escena Mejor." (Dibujo pequeño de Escena Mejor)</li>
+                                        <li>"4. Bloques Jr: Tap, Cambiar Fondo." (Iconos de bloque Tap y Cambiar Fondo)</li>
+                                    </ul>
+                                </li>
+                                <li><em>Imagen:</em> Mostrar la plantilla T-Bar vacía, destacando las secciones Izquierda y Derecha.</li>
+                            </ul>
+                        </td>
+                        <td>
+                            "¡Llegó el momento del último paso de creación! ¡Nuestro <strong>Plan Secreto</strong>! Tomen su plantilla T-Bar. ¡Este es su mapa para construir la historia interactiva en Scratch Jr.!"
+                            <br><br>
+                            "Miren la plantilla. En el <strong>Lado Izquierdo (el grande)</strong>: ¡Dibujen aquí su <strong>Escena Principal</strong>! La que hicieron la sesión pasada, con su Héroe y su Villano listos para ser tocados."
+                             <br><br>
+                            "Y en el <strong>Lado Derecho (el pequeño)</strong>: ¡Aquí va la explicación secreta! Dibujen o escriban súper simple:"
+                            <ol>
+                                <li><strong>"¿Qué es?:</strong> Escriban el nombre de su historia."</li>
+                                <li><strong>"Clic al Villano 😈 -> Escena Peor 😥":</strong> Hagan un dibujo PEQUEÑITO de su escena triste aquí."</li>
+                                <li><strong>"Clic al Héroe 🦸 -> Escena Mejor 😊":</strong> Hagan un dibujo PEQUEÑITO de su escena feliz aquí."</li>
+                                <li><strong>"Bloques Scratch Jr. ✨":</strong> Dibujen un bloque 'Tap' (dedo tocando) y un bloque 'Cambiar Fondo'. ¡Esos son los poderes clave que usarán para que funcione en Scratch Jr.!"</li>
+                            </ol>
+                             "¡Usen todos sus dibujos anteriores! ¡Tienen 15-18 minutos para crear su Plan Maestro T-Bar!"
+                            <br><br>
+                            <em>(Circular intensamente, ayudando a sintetizar la información en el formato T-Bar. Asegurar que conecten los clics con los dibujos de las escenas correspondientes. La clave es la claridad visual y la conexión Causa (Clic) -> Efecto (Cambio de Escena)).</em>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 2:</strong> Proyectar <strong>Diapositiva 24</strong> (Ejemplo Xolo T-Bar).
+                            <ul>
+                                <li><em>Título:</em> "Ejemplo Táctica 7: ¡El Plan Secreto de Xolo!"</li>
+                                <li><em>Imagen:</em> Mostrar el T-Bar completo de "¡Xolo vs. el Basuravirus!":
+                                    <ul>
+                                        <li>Izquierda: Dibujo grande de la Escena Inicial (Río un poco sucio, Xolo, Humano+BV-R, Pez neutro).</li>
+                                        <li>Derecha:
+                                            <ul>
+                                                <li>"Qué es: Historia ¡Xolo vs. Basuravirus!"</li>
+                                                <li>"Clic BV-R 😈 -> [Mini-dibujo Escena Peor: Río sucio, Pez triste]"</li>
+                                                <li>"Clic Xolo 🦸 -> [Mini-dibujo Escena Mejor: Río limpio, Pez feliz, BV-R desaparece]"</li>
+                                                <li>"Bloques Jr: [Dibujo Bloque Tap] + [Dibujo Bloque Cambiar Fondo/Página]"</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                         </td>
+                         <td>
+                            "Miren el ejemplo del Plan Secreto de Xolo. A la izquierda, su escena inicial. A la derecha, explican qué pasa si tocas al virus (¡mundo triste!) y qué pasa si tocas a Xolo (¡mundo feliz!), y los bloques mágicos que usarán."
+                             <br><br>
+                            "¡Así de claro debe quedar su plan! ¡Ahora completen el suyo!"
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Entregable Clave:</strong> Prototipo Conceptual T-Bar por equipo (digital o físico).
+                        </td>
+                        <td><em>(Verificar que los equipos completen su T-Bar de forma clara y lógica).</em></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 3: Táctica 8: ¡Misión Presentada! (Show & Tell + LWW) -->
+        <div id="activity-3" class="activity" data-time="14">
+             <div class="banner" onclick="toggleContent('activity_3_content')">
+                 <div class="title">🌟 Actividad 3: Táctica 8: ¡Misión Presentada! (Show & Tell + LWW) ⏰ Tiempo: 14 minutos</div>
+                 <hr>
+                <div class="subtitle">Estreno Mundial: Los equipos presentan sus T-Bars y reciben retroalimentación LWW de sus compañeros.</div>
+            </div>
+             <div id="activity_3_content" class="content">
+                 <table>
+                     <tr style="background-color: #e9e9e9;">
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                             <strong>Paso 1:</strong> Proyectar <strong>Diapositiva 25</strong>. Preparar notas LWW.
+                            <ul>
+                                <li><em>Título:</em> "¡Paso 8! ¡Estreno Mundial y Aplausos!"</li>
+                                <li><em>Icono:</em> Alfombra roja 🎬🏆, aplausos 👏.</li>
+                                <li><em>Instrucción:</em> "¡Equipos, presenten su Plan Maestro (T-Bar)! (1 min). Compañeros: ¡Preparen sus notas Like 👍, Wish 🙏, Wonder 🤔!"</li>
+                             </ul>
+                         </td>
+                         <td>
+                            "¡Héroes ODS, llegó el momento del <strong>Estreno Mundial</strong>! 🤩 ¡Van a presentar su Plan Maestro T-Bar a sus compañeros! Tienen <strong>1 minuto</strong> cada equipo para mostrar su dibujo principal y explicar súper rápido:"
+                            <ol>
+                                <li>"El nombre de su historia/héroe."</li>
+                                <li>"Qué pasa si tocas al Villano."</li>
+                                <li>"Qué pasa si tocas al Héroe."</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 2:</strong> Proyectar <strong>Diapositiva 26</strong>. Explicar LWW.
+                            <ul>
+                                <li><em>Título:</em> "Retro con Superpoderes: Like 👍, Wish 🙏, Wonder 🤔"</li>
+                                <li><em>Instrucciones Simples LWW (Recordatorio Visual):</em>
+                                    <ul>
+                                        <li>👍 <strong>LIKE:</strong> UNA cosa que te GUSTÓ MUCHO.</li>
+                                        <li>🙏 <strong>WISH:</strong> UNA idea para MEJORARLO (Ojalá...).</li>
+                                        <li>🤔 <strong>WONDER:</strong> UNA PREGUNTA curiosa (Me pregunto si...).</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            Entregar notas adhesivas LWW.
+                        </td>
+                        <td>
+                             "Mientras un equipo presenta, los demás serán <strong>'Críticos con Superpoderes'</strong>. ¡Van a usar sus notas adhesivas para dar ideas geniales! Preparen sus 3 notas: una para <strong>Like</strong> (algo que les gustó MUCHO 👍), una para <strong>Wish</strong> (una idea para mejorar 🙏), y una para <strong>Wonder</strong> (una pregunta curiosa 🤔)."
+                             <br><br>
+                            "Recuerden cómo era: Like es algo genial, Wish es una sugerencia amable, y Wonder es una pregunta interesante. ¡Escuchen con atención y escriban sus ideas!"
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <strong>Paso 3:</strong> Gestionar presentaciones (1 min por equipo) y entrega de notas LWW.
+                            <em>(Mantener ambiente de celebración y apoyo).</em>
+                        </td>
+                        <td>
+                            "¡Muy bien! ¡Equipo 1, al escenario para su estreno!"
+                            <br><br>
+                            <em>(Gestionar las presentaciones de 1 minuto. Al final de cada una, facilitar la entrega RÁPIDA de las notas LWW al equipo que presentó).</em>
+                            <br><br>
+                            "¡Bravo, Equipo 1! ¡Gracias, Críticos con Superpoderes! ¡Ahora, Equipo 2!"
+                            <br><br>
+                            <em>(Continuar hasta que todos los equipos presenten y reciban feedback).</em>
+                        </td>
+                     </tr>
+                     <tr>
+                         <td>
+                             <strong>Paso 4:</strong> Proyectar <strong>Diapositiva 27</strong> (Ejemplo Retro LWW Xolo).
+                             <ul>
+                                 <li><em>Título:</em> ¡Ideas Geniales para Xolo! (Ejemplo de Retro LWW)</li>
+                                 <li><em>Imagen:</em> Puede mostrar 3 notas adhesivas (o nubes de diálogo) con los iconos LWW y el texto de ejemplo:
+                                     <ul>
+                                         <li>👍 LIKE: Texto: "¡ME GUSTÓ que Xolo limpia el río y el pez se pone feliz! ¡Y el dibujo de Xolo héroe está súper!"</li>
+                                         <li>🙏 WISH: Texto: "OJALÁ que cuando Xolo despierte al humano, ¡el humano también ayude a recoger un poquito de basura con Xolo!"</li>
+                                         <li>🤔 WONDER: Texto: "ME PREGUNTO SI... ¿el Basuravirus podría esconderse detrás de una piedra para que sea más difícil hacerle clic?"</li>
+                                     </ul>
+                                 </li>
+                                 <li><em>Pequeña Nota Inferior:</em> "¡Así podemos dar ideas para ayudar a nuestros amigos a hacer sus historias aún más geniales!"</li>
+                             </ul>
+                         </td>
+                         <td>
+                            "Miren qué ideas tan geniales recibió el equipo de Xolo. ¡Así es como nos ayudamos a mejorar nuestras historias! Lean con calma las notas que recibieron, ¡seguro que hay ideas fantásticas!"
+                         </td>
+                    </tr>
+                    <tr>
+                        <td>
+                             <strong>Entregable Clave:</strong> Notas de retroalimentación LWW recibidas por cada equipo.
+                        </td>
+                         <td><em>(Asegurarse de que todos los equipos tengan sus notas LWW).</em></td>
+                     </tr>
+                 </table>
+            </div>
+        </div>
+
+         <!-- Actividad 4: Cierre Final y Próximos Pasos -->
+        <div id="activity-4" class="activity" data-time="3">
+            <div class="banner" onclick="toggleContent('activity_4_content')">
+                <div class="title">🏁 Actividad 4: Cierre Final y Próximos Pasos ⏰ Tiempo: 3 minutos</div>
+                <hr>
+                <div class="subtitle">Celebración final, resumen de logros y motivación para construir la historia en Scratch Jr.</div>
+            </div>
+             <div id="activity_4_content" class="content">
+                <table>
+                     <tr style="background-color: #e9e9e9;">
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Celebración y resumen final.
+                            <em>(No requiere diapositiva específica).</em>
+                         </td>
+                         <td>
+                            "¡¡¡APLAUSOS GIGANTES PARA TODOS LOS EQUIPOS DE HÉROES ODS!!! 👏👏👏 ¡Han completado la receta 'Héroes al Rescate' y tienen Planes Maestros increíbles para sus historias interactivas!"
+                             <br><br>
+                            "Han elegido una misión importante, creado héroes y villanos fantásticos, imaginado los finales feliz y triste, diseñado su escena principal y hasta recibieron ideas geniales de sus compañeros. ¡Son unos verdaderos creadores!"
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 2:</strong> Motivación final y próximos pasos.
+                            <em>(No requiere diapositiva específica).</em>
+                        </td>
+                        <td>
+                            "¿Y ahora qué? ¡Ahora viene la magia de verdad! ✨ Con este Plan Maestro (su T-Bar) y las ideas de sus compañeros (el LWW), ¡están listísimos para ir a <strong>Scratch Jr.</strong> y ¡construir su Aventura ODS interactiva!"
+                            <br><br>
+                            "¡Estoy súper emocionado de ver cómo convierten estos planes en historias digitales! Han demostrado que hasta los héroes más jóvenes pueden usar la tecnología para imaginar un mundo mejor."
+                             <br><br>
+                             "¡Misión Cumplida en el taller! ¡Felicidades, héroes y heroínas! ¡Ahora, a programar!" 🎉💻🌍
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+   </div> <!-- Cierre del container -->
+    <script>
+        // Scripts ya incluidos
+    </script>
+</body>
+</html>
